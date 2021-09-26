@@ -862,7 +862,7 @@ def main(_):
         output_fn=train_writer.process_feature,
         label_list=labels)
     train_writer.close()
-
+    print("***** Running training *****")
     tf.logging.info("***** Running training *****")
     tf.logging.info("  Num orig examples = %d", len(train_examples))
     tf.logging.info("  Num split examples = %d", train_writer.num_features)
