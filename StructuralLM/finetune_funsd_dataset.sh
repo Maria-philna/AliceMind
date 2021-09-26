@@ -3,7 +3,7 @@ export FUNSD_DIR=./funsd_dataset_structurallm
 export TOKENIZER_DIR=./tokenizer_model
 
 learning_rate=8e-6
-num_train_epoch=27
+num_train_epoch=1
 
 CUDA_VISIBLE_DEVICES=7 python run_seq_labeling.py \
 --bert_config_file=$TOKENIZER_DIR/config.json \
