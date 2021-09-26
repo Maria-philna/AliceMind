@@ -725,6 +725,7 @@ def validate_flags_or_throw(bert_config):
       raise ValueError(
           "If `do_train` is True, then `train_file` must be specified.")
   if FLAGS.do_predict:
+    print("inside prediction")
     if not FLAGS.predict_file:
       raise ValueError(
           "If `do_predict` is True, then `predict_file` must be specified.")
@@ -877,6 +878,7 @@ def main(_):
     estimator.train(input_fn=train_input_fn, max_steps=num_train_steps)
 
   if FLAGS.do_predict:
+    print("inside prediction2")
     eval_examples = read_funsd_examples(
         input_file=FLAGS.predict_file, is_training=False)
 
